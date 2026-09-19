@@ -1,19 +1,3 @@
-colorscheme pablo
-"colorscheme default         " it`s change default colors terminal.
-"colorscheme industry
-"colorscheme slate
-set spell
-"set relativenumber
-" filetype plugin on
-
- "   call plug#begin('~/.vim/plugged')
-" Plug 'preservim/nerdtree'
-" List your plugins here
-  " Plug 'tpope/vim-sensible'
-" Plug 'puremourning/vimspector'
-
- "   call plug#end()
-" packadd termdebug
 " An example for a vimrc file.
 "
 " Maintainer:  The Vim Project <https://github.com/vim/vim>
@@ -22,11 +6,6 @@ set spell
 "
 " To use it, copy it to
 "         for Unix:  ~/.vimrc
-"        for Amiga:  s:.vimrc
-"   for MS-Windows:  $VIM\_vimrc
-"        for Haiku:  ~/config/settings/vim/vimrc
-"      for OpenVMS:  sys$login:.vimrc
-
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
@@ -164,3 +143,15 @@ set hlsearch                   " Включаем подсветку поиск�
 set incsearch                  " Поиск по мере ввода
 set ic                         " Игнорировать регистр при поиске
 set smartcase                  " Игнорировать регистр, если нет заглавных букв
+
+set backupdir=~/d/.vim_garb
+set undodir=~/d/.vim_garb
+set directory=~/d/.vim_garb
+set viminfofile=~/d/.vim_garb/shit.info
+
+"colorscheme pablo
+colorscheme default         " it`s change default colors terminal.
+"colorscheme industry
+"colorscheme slate
+set spell
+
