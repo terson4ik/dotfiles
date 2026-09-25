@@ -1,0 +1,11 @@
+
+# auto start Xorg only in tty1
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+    #sleep 0.5
+    #exec startplasma-wayland
+    exec startx
+fi
+
+#if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 2 ]; then
+#    setfont ter-u32b
+#fi

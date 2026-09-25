@@ -1,3 +1,13 @@
-Xft.dpi: 144
 Xcursor.theme: Adwaita
-Xcursor.size: 24
+
+XTerm*renderFont: true
+xterm*faceName: DejaVu Sans Mono:size=17:antialias=true
+!XTerm*faceName: Monospace
+XTerm*faceSize: 11
+xterm*scrollBar: false
+
+xterm*background: #1e1e1e
+xterm*foreground: #d4d4d4
+xterm*cursorColor: #ffffff
+
+xterm*selectToClipboard: true
