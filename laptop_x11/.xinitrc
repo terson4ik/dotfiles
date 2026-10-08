@@ -8,7 +8,7 @@ xsetroot -solid "#282828"
 #redshift -l 50.454009:30.619396 &
 firefox &
 #exec startxfce4
-exec dwm
+exec startfvwm2
 
 #############UNUSED
 
