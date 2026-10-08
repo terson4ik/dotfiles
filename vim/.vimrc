@@ -144,10 +144,10 @@ set incsearch                  " Поиск по мере ввода
 set ic                         " Игнорировать регистр при поиске
 set smartcase                  " Игнорировать регистр, если нет заглавных букв
 
-set backupdir=~/d/.vim_garb
-set undodir=~/d/.vim_garb
-set directory=~/d/.vim_garb
-set viminfofile=~/d/.vim_garb/shit.info
+set backupdir=~/.cache/.vim
+set undodir=~/.cache/.vim
+set directory=~/.cache/.vim
+set viminfofile=~/.cache/.vim/shit.vim
 
 "colorscheme pablo
 colorscheme default         " it`s change default colors terminal.
