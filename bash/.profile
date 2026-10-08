@@ -10,7 +10,6 @@
 
 # my own variables
 export EDITOR=vim
-export BROWSER=firefox
 export EXPLORER=dolphin
 
 # if running bash
@@ -35,4 +34,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
