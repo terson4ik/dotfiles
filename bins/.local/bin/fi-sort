@@ -1,0 +1,46 @@
+#!/bin/bash
+# sorting files in first argument dir
+
+if [ $# -eq 0 ]; then
+    TARGET="$HOME/Downloads"
+else
+    TARGET="$1"
+fi
+
+if [ ! -d "$TARGET"  ]; then
+    echo "nothing to sorting: '$TARGET' it's not a directory";
+    exit 1;
+fi
+
+for file in "$TARGET"/*; do
+    if [ -f "$file" ]; then
+        case "$file" in
+            *.txt | *.pdf | *.docx | *.doc | *.odt)
+                
+                mkdir -p "$TARGET/documents"
+                mv "$file" "$TARGET/documents"
+                ;;
+            *.mp4 | *.mpv)
+                mkdir -p "$TARGET/video"
+                mv "$file" "$TARGET/video"
+                ;;
+            *.mp3 | *.mp4a)
+                mkdir -p "$TARGET/audio"
+                mv "$file" "$TARGET/audio"
+                ;;
+            *.jpeg | *.png)
+                mkdir -p "$TARGET/images"
+                mv "$file" "$TARGET/images"
+                ;;
+            *.tgz | *.tar.gz | *.zip | *.tar.xz)
+                mkdir -p "$TARGET/archives"
+                mv "$file" "$TARGET/archives"
+                ;;
+            *)
+                echo "$file: unknown format, skip.";
+                ;;
+        esac
+    fi
+done
+
+echo "sorted done";

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+fetch() {
+cat  /sys/class/power_supply/BAT0/capacity
+}
+
+if [ "$1" == '-w' ]; then
+    while true; do
+        fetch
+        sleep 10
+    done
+else
+    fetch
+fi

@@ -1,0 +1,17 @@
+#!/bin/bash
+# make a simple backup
+
+if [ 2 -ne $# ]; then
+    echo "usage: back <src> <dst>"
+    exit 1
+fi
+
+SRC=$1
+DEST=$2
+if [ ! -e "$SRC" ]; then
+    echo "nothing to back"
+    exit 1
+fi
+
+mkdir -p "$DEST"
+tar czvf "$DEST"/back_$(date +%F).tar.gz "$SRC";
